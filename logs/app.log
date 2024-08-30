@@ -1,0 +1,62 @@
+{"time":"2024-08-12T23:48:47.086167+05:00","level":"ERROR","msg":"GetUserProfile request error: rpc error: code = Unknown desc = sql: Scan error on column index 3, name \"date_of_birth\": converting NULL to string is unsupported"}
+{"time":"2024-08-13T00:06:19.21059909+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T00:06:58.803564101+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T00:07:02.625331423+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:14:34.740586337+05:00","level":"ERROR","msg":"UpdateUserProfile request error: rpc error: code = Unknown desc = pq: date/time field value out of range: \"2014-14-03\""}
+{"time":"2024-08-13T12:17:19.010865871+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:19:40.65623129+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:22:48.077378164+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:26:31.243631597+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:27:39.440325362+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:27:49.694067853+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:29:14.257372786+05:00","level":"ERROR","msg":"Claimni o'qishda xatolik: token contains an invalid number of segments"}
+{"time":"2024-08-13T12:59:01.316091489+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:03:21.365929189+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:05:51.285153415+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:11:06.355075185+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:15:33.963423317+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:20:27.856173086+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:22:26.757383121+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T13:23:51.748928847+05:00","level":"ERROR","msg":"CreateMedicalRecord request error: rpc error: code = Unavailable desc = connection error: desc = \"error reading server preface: EOF\""}
+{"time":"2024-08-13T15:12:56.23071019+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T15:18:16.092393686+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T15:28:31.785836673+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T15:30:45.949812269+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T15:31:06.699202308+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T15:32:48.22429928+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T15:51:21.199421099+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T17:57:27.215465825+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T17:58:16.078873134+05:00","level":"ERROR","msg":"GetMedicalRecordById request error: rpc error: code = Unknown desc = mongo: no documents in result"}
+{"time":"2024-08-13T18:22:52.034018989+05:00","level":"ERROR","msg":"Kafka bilan ma'lumotlarni yuborishda xatolik: [5] Leader Not Available: the cluster is in the middle of a leadership election and there is currently no leader for this partition and hence it is unavailable for writes"}
+{"time":"2024-08-14T06:48:19.718671139+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
+{"time":"2024-08-14T06:49:16.524604382+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
+{"time":"2024-08-14T06:53:33.725558608+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unimplemented desc = method GetRealTimeHealth not implemented"}
+{"time":"2024-08-14T06:54:19.465237373+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unimplemented desc = method GetRealTimeHealth not implemented"}
+{"time":"2024-08-14T06:57:03.738771733+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unimplemented desc = method GetRealTimeHealth not implemented"}
+{"time":"2024-08-14T07:03:38.032522718+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unavailable desc = error reading from server: EOF"}
+{"time":"2024-08-14T07:06:48.460736819+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unavailable desc = error reading from server: EOF"}
+{"time":"2024-08-14T07:11:34.154011174+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unavailable desc = error reading from server: EOF"}
+{"time":"2024-08-14T07:13:22.234356674+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unknown desc = dial tcp: lookup l-redis on 127.0.0.53:53: server misbehaving"}
+{"time":"2024-08-14T07:16:21.714936737+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unknown desc = redis: can't marshal *monitoring.MedicalRecord (implement encoding.BinaryMarshaler)"}
+{"time":"2024-08-14T08:40:25.684697644+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unknown desc = redis.Scan(non-struct *string)"}
+{"time":"2024-08-14T08:40:56.605681708+05:00","level":"ERROR","msg":"GetRealTimeHealth request error: rpc error: code = Unknown desc = redis.Scan(non-struct *[]uint8)"}
+{"time":"2024-08-14T09:40:16.418222473+05:00","level":"ERROR","msg":"GetDailySummaryHealth request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
+{"time":"2024-08-14T10:19:51.123611104+05:00","level":"ERROR","msg":"GetAllMedicalRecord request error: rpc error: code = Unknown desc = invalid start date format: parsing time \"qfqef\" as \"2006-01-02\": cannot parse \"qfqef\" as \"2006\""}
+{"time":"2024-08-14T10:20:11.271834767+05:00","level":"ERROR","msg":"GetAllMedicalRecord request error: rpc error: code = Unknown desc = invalid start date format: parsing time \"45\" as \"2006-01-02\": cannot parse \"45\" as \"2006\""}
+{"time":"2024-08-14T10:28:27.693330403+05:00","level":"ERROR","msg":"GetAllMedicalRecord request error: rpc error: code = Unknown desc = invalid start date format: parsing time \"wefqewf\" as \"2006-01-02\": cannot parse \"wefqewf\" as \"2006\""}
+{"time":"2024-08-14T10:28:35.108548874+05:00","level":"ERROR","msg":"GetAllMedicalRecord request error: rpc error: code = Unknown desc = invalid start date format: parsing time \"45\" as \"2006-01-02\": cannot parse \"45\" as \"2006\""}
+{"time":"2024-08-14T10:56:09.416823984+05:00","level":"ERROR","msg":"GetAllWearable request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
+{"time":"2024-08-14T10:57:08.741878169+05:00","level":"ERROR","msg":"GetAllWearable request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
+{"time":"2024-08-14T12:26:10.815387335+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"user\""}
+{"time":"2024-08-14T12:26:10.816027455+05:00","level":"ERROR","msg":"invalid option: \"user\""}
+{"time":"2024-08-14T12:28:29.623181721+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"host\""}
+{"time":"2024-08-14T12:28:29.624075433+05:00","level":"ERROR","msg":"invalid option: \"host\""}
+{"time":"2024-08-14T12:29:02.664036016+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"host\""}
+{"time":"2024-08-14T12:29:02.664383153+05:00","level":"ERROR","msg":"invalid option: \"host\""}
+{"time":"2024-08-14T12:29:10.618836025+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"host\""}
+{"time":"2024-08-14T12:29:10.619715234+05:00","level":"ERROR","msg":"invalid option: \"host\""}
+{"time":"2024-08-14T12:29:45.351844594+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"host\""}
+{"time":"2024-08-14T12:29:45.352254902+05:00","level":"ERROR","msg":"invalid option: \"host\""}
+{"time":"2024-08-14T12:34:50.517077394+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"host\""}
+{"time":"2024-08-14T12:34:50.517714703+05:00","level":"ERROR","msg":"invalid option: \"host\""}
+{"time":"2024-08-14T12:48:47.96404348+05:00","level":"ERROR","msg":"DeleteLifestyle request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
