@@ -1,6 +1,7 @@
 package api
 
 import (
+	"api/api/handler"
 	"api/config"
 	"api/pkg"
 	"log/slog"
@@ -24,7 +25,19 @@ func NewController(router *gin.Engine)Controller{
 }
 
 func(R *controllerImpl) SetUpRoutes(logger *slog.Logger, client pkg.Clients){
-	
+	h := handler.NewHandler(logger, client)
+
+	user := R.Router.Group("/user")
+	user.GET("/getUsers", h.GetUsers)
+	user.DELETE("/deleteUser", h.DeleteUsers)
+	user.GET("/getUserById", h.GetByIdUsers)
+	user.GET("/getFollowers", h.GetFollowers)
+	user.DELETE("/deleteFollower", h.DeleteFollower)
+	user.GET("/getByIdFollower", h.GetByIdFollower)
+	user.POST("/subscribe", h.Subscribe)
+	user.GET("/getFollowing", h.GetFollowing)
+	user.DELETE("/deleteFollowing", h.DeleteFollowing)
+	user.GET("/getByIdFollowing", h.GetByIdFollowing)
 }
 
 func(R *controllerImpl) StartRouter(cfg config.Config)error{
