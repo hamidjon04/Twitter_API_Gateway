@@ -2,6 +2,7 @@ package middleware
 
 import (
 	"api/api/token"
+	"api/model"
 	"fmt"
 	"net/http"
 
@@ -12,21 +13,22 @@ func JWTMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		auth := c.GetHeader("Authorization")
 		if auth == "" {
-			c.JSON(http.StatusUnauthorized, fmt.Errorf("authorization header is required"))
+			c.JSON(http.StatusUnauthorized, model.Error{
+				Message: "authorization header is required",})
 			c.Abort()
 			return
 		}
 
 		valid, err := token.ValidToken(auth)
 		if !valid || err != nil {
-			c.JSON(http.StatusUnauthorized, fmt.Errorf("invalid token: %v", err))
+			c.JSON(http.StatusUnauthorized, model.Error{Message: fmt.Sprintf("invalid token: %v", err)})
 			c.Abort()
 			return
 		}
 
 		claims, err := token.ExtractClaimToken(auth)
 		if err != nil || !valid {
-			c.JSON(http.StatusUnauthorized, fmt.Errorf("invalid token claims: %v", err))
+			c.JSON(http.StatusUnauthorized, model.Error{Message: fmt.Sprintf("invalid token claims: %v", err)})
 			c.Abort()
 			return
 		}

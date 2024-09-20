@@ -60,3 +60,40 @@
 {"time":"2024-08-14T12:34:50.517077394+05:00","level":"ERROR","msg":"Adapter databazaga ulanmadi: invalid option: \"host\""}
 {"time":"2024-08-14T12:34:50.517714703+05:00","level":"ERROR","msg":"invalid option: \"host\""}
 {"time":"2024-08-14T12:48:47.96404348+05:00","level":"ERROR","msg":"DeleteLifestyle request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:6666: connect: connection refused\""}
+{"time":"2024-09-18T15:14:17.667861375+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, CreateTwit request error: rpc error: code = Unavailable desc = dns: A record lookup error: lookup grpc-service on 127.0.0.53:53: server misbehaving"}
+{"time":"2024-09-18T15:17:40.801909349+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, UpdateTwit request error: rpc error: code = Unimplemented desc = method UpadateTwit not implemented"}
+{"time":"2024-09-18T15:21:44.597779194+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, UpdateTwit request error: rpc error: code = Unimplemented desc = unknown method UpdateTwit for service twit.TwitServiceClient"}
+{"time":"2024-09-18T15:23:23.309446827+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, UpdateTwit request error: rpc error: code = Unimplemented desc = unknown method UpdateTwit for service twit.TwitServiceClient"}
+{"time":"2024-09-18T15:23:58.756038795+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, UpdateTwit request error: rpc error: code = Unimplemented desc = unknown method UpdateTwit for service twit.TwitServiceClient"}
+{"time":"2024-09-18T15:45:30.217938183+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, DeleteTwit request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T15:53:22.835485064+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, DeleteTwit request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T15:53:45.353126022+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, DeleteTwit request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T15:59:36.000754386+05:00","level":"ERROR","msg":"Ma'lumotlarni olishda xatolik: invalid character '1' in literal false (expecting 'a')"}
+{"time":"2024-09-18T17:33:30.899994428+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:34:54.909229416+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:36:35.299760115+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:37:13.203339306+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:37:31.136484456+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:41:50.860452212+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:50:08.645509024+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:8082: connect: connection refused\""}
+{"time":"2024-09-18T17:57:43.831446465+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T17:59:10.362999348+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T18:17:41.041385423+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T18:17:44.78735384+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T18:18:07.290955536+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T18:18:45.670170882+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T18:19:42.442469896+05:00","level":"ERROR","msg":"Service bilan bog'lanib bo'lmadi, AddLike request error: rpc error: code = Internal desc = internal error"}
+{"time":"2024-09-18T18:25:56.842038907+05:00","level":"ERROR","msg":"Ma'lumotlarni olishda xatolik: EOF"}
+{"time":"2024-09-18T18:30:59.12039306+05:00","level":"ERROR","msg":"Ma'lumotlarni olishda xatolik: EOF"}
+{"time":"2024-09-18T18:37:42.420166416+05:00","level":"ERROR","msg":"AddFollowing request error: rpc error: code = Unimplemented desc = method AddFollowing not implemented"}
+{"time":"2024-09-19T08:37:30.744263257+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:44:55.999002698+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:46:15.76709476+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:54:49.702708869+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:55:15.303304579+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:57:17.320024832+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:57:47.780029111+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:58:30.590681037+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T08:59:22.495471238+05:00","level":"INFO","msg":"10"}
+{"time":"2024-09-19T09:05:06.618718489+05:00","level":"ERROR","msg":"Limit uchun noto'gri ma'lumot kiritildi: strconv.Atoi: parsing \"\": invalid syntax"}
+{"time":"2024-09-19T09:07:29.314105979+05:00","level":"ERROR","msg":"GetFollowers request error: rpc error: code = Unknown desc = pq: column \"updated_at\" does not exist"}

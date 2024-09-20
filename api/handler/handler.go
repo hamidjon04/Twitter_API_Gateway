@@ -20,6 +20,14 @@ type Handler interface {
 	GetFollowing(c *gin.Context)
 	DeleteFollowing(c *gin.Context)
 	GetByIdFollowing(c *gin.Context)
+
+	CreateTwit(c *gin.Context)
+	UpdateTwit(c *gin.Context)
+	DeleteTwit(c *gin.Context)
+	GetTwits(c *gin.Context)
+	GetFollowerTwit(c *gin.Context)
+	AddLike(c *gin.Context)
+	RemoveLike(c *gin.Context)
 }
 
 type handlerImpl struct {

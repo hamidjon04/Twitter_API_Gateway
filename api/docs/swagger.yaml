@@ -1,0 +1,738 @@
+definitions:
+  model.Error:
+    properties:
+      message:
+        type: string
+    type: object
+  twit.AddLikeReq1:
+    properties:
+      twit_id:
+        type: string
+    type: object
+  twit.AddLikeResp:
+    properties:
+      massage:
+        type: string
+    type: object
+  twit.CreateTwitReq1:
+    properties:
+      content:
+        type: string
+      media:
+        type: string
+    type: object
+  twit.CreateTwitResp:
+    properties:
+      id:
+        type: string
+      message:
+        type: string
+    type: object
+  twit.DeleteTwitReq1:
+    properties:
+      twit_id:
+        type: string
+    type: object
+  twit.GetTwitsResp:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      twits:
+        items:
+          $ref: '#/definitions/twit.Twit'
+        type: array
+    type: object
+  twit.Message:
+    properties:
+      message:
+        type: string
+    type: object
+  twit.Twit:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      media:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: string
+    type: object
+  twit.UpdateReq1:
+    properties:
+      content:
+        type: string
+      id:
+        type: string
+      media:
+        type: string
+    type: object
+  twit.UpdateTwitResp:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      media:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: string
+    type: object
+  users.Follow:
+    properties:
+      birth_day:
+        type: string
+      email:
+        type: string
+      id:
+        type: string
+      image:
+        type: string
+      lastname:
+        type: string
+      name:
+        type: string
+      username:
+        type: string
+    type: object
+  users.Followers:
+    properties:
+      created_at:
+        type: string
+      follower_id:
+        type: string
+      id:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: string
+    type: object
+  users.Following:
+    properties:
+      created_at:
+        type: string
+      following_id:
+        type: string
+      id:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: string
+    type: object
+  users.FollowingReq1:
+    properties:
+      following_id:
+        type: string
+    type: object
+  users.GetUserRes:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      users:
+        items:
+          $ref: '#/definitions/users.User'
+        type: array
+    type: object
+  users.GetaFollowersRes:
+    properties:
+      followers:
+        items:
+          $ref: '#/definitions/users.Followers'
+        type: array
+      limit:
+        type: integer
+      page:
+        type: integer
+    type: object
+  users.GetaFollowingRes:
+    properties:
+      following:
+        items:
+          $ref: '#/definitions/users.Following'
+        type: array
+      limit:
+        type: integer
+      page:
+        type: integer
+    type: object
+  users.Massage:
+    properties:
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
+  users.User:
+    properties:
+      birth_day:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      id:
+        type: string
+      image:
+        type: string
+      lastname:
+        type: string
+      name:
+        type: string
+      password:
+        type: string
+      updated_at:
+        type: string
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: This is a sample server for Auth Service.
+  title: Auth Service API3
+  version: "1.0"
+paths:
+  /twits/addLike:
+    post:
+      consumes:
+      - application/json
+      description: Foydalanuvchi tomonidan tanlangan twitga like qo'shadi
+      parameters:
+      - description: Twit ID ma'lumotlari
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/twit.AddLikeReq1'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Like qo'shish muvaffaqiyatli bo'ldi
+          schema:
+            $ref: '#/definitions/twit.AddLikeResp'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: AddLike request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Twitga like qo'shish
+      tags:
+      - Likes
+  /twits/createTwit:
+    post:
+      consumes:
+      - application/json
+      description: Foydalanuvchi tomonidan yangi twit yaratadi
+      parameters:
+      - description: Twit ma'lumotlari
+        in: body
+        name: CreateTwitReq
+        required: true
+        schema:
+          $ref: '#/definitions/twit.CreateTwitReq1'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/twit.CreateTwitResp'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: CreateTwit request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Yangi twit yaratish
+      tags:
+      - Twits
+  /twits/deleteTwit/{id}:
+    delete:
+      description: Foydalanuvchi tomonidan yaratilgan twitni o'chiradi
+      parameters:
+      - description: Twit ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/twit.Message'
+        "500":
+          description: DeleteTwit request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Twitni o'chirish
+      tags:
+      - Twits
+  /twits/getFollowerTwit:
+    get:
+      description: Foydalanuvchining kuzatuvchilari tomonidan yaratilgan barcha twitlarni
+        qaytaradi
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/twit.GetTwitsResp'
+        "500":
+          description: GetFollowerTwit request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Kuzatuvchilar twitlarini olish
+      tags:
+      - Twits
+  /twits/getUserTwit:
+    get:
+      description: Foydalanuvchining barcha twitlarini qaytaradi
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/twit.GetTwitsResp'
+        "500":
+          description: GetTwits request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchi twitlarini olish
+      tags:
+      - Twits
+  /twits/unlike:
+    put:
+      consumes:
+      - application/json
+      description: Foydalanuvchi tomonidan tanlangan twitdan like olib tashlanadi
+      parameters:
+      - description: Twit ID ma'lumotlari
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/twit.DeleteTwitReq1'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Muvaffaqiyatli olib tashlandi
+          schema:
+            $ref: '#/definitions/twit.Message'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: RemoveLike request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Twitdan like olib tashlash
+      tags:
+      - Likes
+  /twits/updateTwit:
+    put:
+      consumes:
+      - application/json
+      description: Foydalanuvchi tomonidan mavjud twitni yangilaydi
+      parameters:
+      - description: Yangilash uchun twit ma'lumotlari
+        in: body
+        name: UpdateTwitReq
+        required: true
+        schema:
+          $ref: '#/definitions/twit.UpdateReq1'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/twit.UpdateTwitResp'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: UpdateTwit request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Mavjud twitni yangilash
+      tags:
+      - Twits
+  /user/deleteFollower:
+    delete:
+      consumes:
+      - application/json
+      description: Foydalanuvchi kuzatuvchisini o'chirish
+      parameters:
+      - description: Kuzatuvchi ID'si
+        in: path
+        name: followerId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.Massage'
+        "400":
+          description: Noto'g'ri kuzatuvchi ID'si
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: DeleteFollower request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchi kuzatuvchisini o'chirish
+      tags:
+      - Users
+  /user/deleteFollowing:
+    delete:
+      consumes:
+      - application/json
+      description: Foydalanuvchi kuzatayotgan boshqa foydalanuvchini kuzatishni bekor
+        qiladi
+      parameters:
+      - description: Bekor qilinadigan following foydalanuvchi IDsi
+        in: body
+        name: followingId
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.Massage'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: DeleteFollowing request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchini kuzatishni bekor qilish
+      tags:
+      - Users
+  /user/deleteUser:
+    delete:
+      consumes:
+      - application/json
+      description: Foydalanuvchini ID orqali o'chirish
+      parameters:
+      - description: Foydalanuvchi ID
+        in: body
+        name: id
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.Massage'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: DeleteUsers so'rov xatosi
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchini o'chirish
+      tags:
+      - Users
+  /user/getByIdFollower:
+    get:
+      consumes:
+      - application/json
+      description: Kuzatuvchini ID bo'yicha olish
+      parameters:
+      - description: Kuzatuvchi ID'si
+        in: path
+        name: followerId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.Follow'
+        "400":
+          description: Noto'g'ri kuzatuvchi ID'si
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: GetByIdFollower request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Kuzatuvchini ID bo'yicha olish
+      tags:
+      - Users
+  /user/getFollowers:
+    get:
+      consumes:
+      - application/json
+      description: Limit va offset query parametrlari orqali foydalanuvchi kuzatuvchilarini
+        olish
+      parameters:
+      - description: Limit
+        in: query
+        name: limit
+        required: true
+        type: integer
+      - description: Offset
+        in: query
+        name: offset
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.GetaFollowersRes'
+        "400":
+          description: Noto'g'ri limit yoki offset qiymatlari
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: GetFollowers so'rov xatosi
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchilar ro'yxatidagi kuzatuvchilarni olish
+      tags:
+      - Users
+  /user/getFollowing:
+    get:
+      consumes:
+      - application/json
+      description: Foydalanuvchi kuzatayotgan odamlarning ro'yxatini oladi
+      parameters:
+      - description: Sahifada ko'rsatiladigan elementlar soni
+        in: query
+        name: limit
+        required: true
+        type: integer
+      - description: Qaysi sahifadan boshlab olish kerakligi
+        in: query
+        name: offset
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.GetaFollowingRes'
+        "400":
+          description: Limit yoki offset noto'g'ri
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: GetFollowing request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchi kuzatayotgan odamlarni olish
+      tags:
+      - Users
+  /user/getUsers:
+    get:
+      consumes:
+      - application/json
+      description: Limit va offset query parametrlari orqali foydalanuvchilar ro'yxatini
+        olish
+      parameters:
+      - description: Limit
+        in: query
+        name: limit
+        required: true
+        type: integer
+      - description: Offset
+        in: query
+        name: offset
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.GetUserRes'
+        "400":
+          description: Noto'g'ri limit yoki offset qiymatlari
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: GetUsers so'rov xatosi
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchilar ro'yxatini olish
+      tags:
+      - Users
+  /user/subscribe:
+    post:
+      consumes:
+      - application/json
+      description: Foydalanuvchi boshqa bir foydalanuvchini kuzatadi
+      parameters:
+      - description: Following ID ma'lumotlari
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/users.FollowingReq1'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.Massage'
+        "400":
+          description: Noto'g'ri kuzatilayotgan foydalanuvchi ID'si
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: AddFollowing request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Kuzatuvchi qo'shish (subscribe)
+      tags:
+      - Users
+  /users/getByIdFollowing:
+    get:
+      consumes:
+      - application/json
+      description: Foydalanuvchi tomonidan kuzatib borilayotgan ma'lum bir foydalanuvchi
+        haqida ma'lumot olish
+      parameters:
+      - description: Kuzatilayotgan foydalanuvchi IDsi
+        in: body
+        name: followingId
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.Follow'
+        "400":
+          description: Ma'lumotlarni olishda xatolik
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: GetByIdFollowing request error
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Kuzatib boruvchi foydalanuvchi haqida ma'lumot olish
+      tags:
+      - Users
+  /users/getUserById:
+    get:
+      consumes:
+      - application/json
+      description: Foydalanuvchi ma'lumotlarini ID orqali olish
+      parameters:
+      - description: Foydalanuvchi ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/users.User'
+        "400":
+          description: Noto'g'ri ID
+          schema:
+            $ref: '#/definitions/model.Error'
+        "500":
+          description: GetByIdUsers so'rov xatosi
+          schema:
+            $ref: '#/definitions/model.Error'
+      security:
+      - ApiKeyAuth: []
+      summary: Foydalanuvchini ID orqali olish
+      tags:
+      - Users
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

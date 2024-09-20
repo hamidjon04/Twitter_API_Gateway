@@ -40,7 +40,7 @@ func LoadConfig() Config {
 	config.USER_ROUTER = cast.ToString(coalesce("USER_ROUTER", ":1596"))
 	config.SIGNING_KEY = cast.ToString(coalesce("SIGNING_KEY", "secret"))
 	config.API_GATEWAY = cast.ToString(coalesce("API_GATEWAY", ":4589"))
-	config.TWIT_SERVICE = cast.ToString(coalesce("TWIT-SERVICE", "grpc-service:6666"))
+	config.TWIT_SERVICE = cast.ToString(coalesce("TWIT-SERVICE", ":8082"))
 	config.KAFKA_PORT = cast.ToString(coalesce("KAFKA_PORT", "localhost:9092"))
 
 	return config
